@@ -1,0 +1,4 @@
+let number = [2,3,4,7,5,11,89,46,32,69.0];
+
+let resullt = number.filter(num => num % 2 === 0);
+console.log(result);

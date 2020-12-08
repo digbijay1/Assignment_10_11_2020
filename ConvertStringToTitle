@@ -1,0 +1,44 @@
+let mainArray = [
+    "my first github project",
+    "i have pushed my code",
+    "you can check it",
+  ];
+  
+  let upperCase = function (str) {
+    let modifiedStr = str.split("");
+    let value = modifiedStr.splice(0, 1).toString().toUpperCase();
+    modifiedStr.unshift(value);
+    return modifiedStr.join("");
+  };
+  
+  let result = mainArray.map((ele) => {
+    let strArr = ele.split(" ");
+    let resultStr = strArr.map((str) => {
+      return upperCase(str);
+    });
+  
+    return resultStr.join(" ");
+  });
+  
+  console.log(result);
+  
+  //IIFE
+  (function (mainArray) {
+    let upperCase = function (str) {
+      let modifiedStr = str.split("");
+      let value = modifiedStr.splice(0, 1).toString().toUpperCase();
+      modifiedStr.unshift(value);
+      return modifiedStr.join("");
+    };
+  
+    let result = mainArray.map((ele) => {
+      let strArr = ele.split(" ");
+      let resultStr = strArr.map((str) => {
+        return upperCase(str);
+      });
+  
+      return resultStr.join(" ");
+    });
+  
+    console.log(result);
+  })(mainArray);
